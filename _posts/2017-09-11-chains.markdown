@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Lexical Chains meet Word Embeddings in Document-level Statistical Machine Translation"
+date:   2017-11-11 11:11:59 +00:00
+categories: research
+authors: "<strong>Laura Mascarell</strong>"
+venue: "DiscoMT Workshop, EMNLP"
+paper: https://aclanthology.org/W17-4813/
+---

@@ -12,14 +12,28 @@
 /**************/
 /* BASE RULES */
 /**************/
+:root {
+  --cream: #FDFBFA;
+  --rosewood: #BD6365;
+  --brown: #A35D4E;
+  --buttermilk: #fdf6d8;
+  --purple: #5C3A4D;
+  --gold: #C09A5B;
+}
+
+body {
+  color: var(--purple);
+  background-color: var(--cream);
+}
+
 a {
-  color: #1772d0;
+  color: var(--rosewood);
   text-decoration: none;
 }
 
 a:focus,
 a:hover {
-  color: #f09228;
+  color: var(--brown);
   text-decoration: none;
 }
 
@@ -29,19 +43,33 @@ th,
 tr,
 p,
 a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-family: 'Inter', sans-768pxserif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
   font-display: auto;
+}
+
+td {
+  font-family: 'Inter', sans-768pxserif;
+  font-size: 14px;
+  line-height: 1.4;
+  font-display: auto;
+}
+
+td > a {
+  font-size: 14px;
 }
 
 strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'Inter', sans-768pxserif;
   font-size: 14px;
   font-display: auto;
+  font-weight: bold;
 }
 
 h2 {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'Inter', sans-768pxserif;
   font-size: 22px;
   font-display: auto;
   font-weight: normal;
@@ -51,7 +79,7 @@ h2 {
 }
 
 h3 {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'Inter', sans-768pxserif;
   font-size: 14px;
   font-weight: 700;
   font-display: auto;
@@ -61,7 +89,7 @@ h3 {
 }
 
 h1 {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: 'Inter', sans-768pxserif;
   font-size: 32px;
   font-weight: normal;
   font-display: auto;
@@ -95,8 +123,91 @@ h1 {
   -webkit-transition: opacity .2s ease-in-out;
 }
 
+.icon-spacing {
+  margin: 0 5px;
+}
+
+.intro-section {
+  padding: 2.5%;
+  margin: 2em auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.intro-text {
+  flex: 1;
+}
+
+.profile-img {
+  max-width: 220px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-img img {
+  border-radius: 8px;
+  margin-top: 2em;
+}
+
+.footer {
+  position: relative;
+  background-color: var(--rosewood);
+  color: white;
+  margin-top: 3rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer::after {
+  background-image: url("/images/background.png");
+  width: 210px;
+  height: 260px;
+  content: "";
+  position: absolute;
+  top: -260px;
+  transform: translateX(30%);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  opacity: 0.55;
+}
+
 span.highlight {
   background-color: #ffffd0;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .profile-img img {
+    margin-top: 0;
+  }
+
+  .intro-section {
+    flex-direction: column;
+  }
+
+  .profile-img {
+    max-width: 150px;
+  }
+
+  .footer::after {
+    display: none;
+  }
+
+  td, strong, h3 {
+    font-size: 12px;
+  }
+
+  td > a {
+    font-size: 12px;
+  }
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS

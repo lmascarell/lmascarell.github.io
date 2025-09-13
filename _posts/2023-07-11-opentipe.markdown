@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "OpenTIPE: An Open-source Translation Framework for Interactive Post-Editing Research"
+date:   2023-07-11 11:11:59 +00:00
+categories: research
+authors: "Fabian Landwehr, Thomas Steinmann, <strong>Laura Mascarell</strong>"
+venue: "ACL System Demonstrations"
+paper: https://aclanthology.org/2023.acl-demo.19/
+code: https://github.com/mediatechnologycenter/opentipe
+demo: https://aclanthology.org/2023.acl-demo.19.mp4
+website: https://mtc.ethz.ch/research/natural-language-processing/machine-translation.html
+---

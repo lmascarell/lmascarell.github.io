@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Consistent Translation of Repeated Nouns using Syntactic and Semantic Cues"
+date:   2017-04-11 11:11:59 +00:00
+categories: research
+authors: "Xiao Pu, <strong>Laura Mascarell</strong>, Andrei Popescu-Belis"
+venue: "EACL"
+paper: https://aclanthology.org/E17-1089/
+---

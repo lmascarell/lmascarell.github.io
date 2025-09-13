@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Which Information Matters? Dissecting Human-written Multi-document Summaries with Partial Information Decomposition"
+date:   2024-08-11 11:11:59 +00:00
+categories: research
+authors: "<strong>Laura Mascarell</strong>, Yan L'Homme, Majed El Helou"
+venue: "Findings ACL"
+paper: https://aclanthology.org/2024.findings-acl.316/
+poster: /pdfs/poster_spider.pdf
+---

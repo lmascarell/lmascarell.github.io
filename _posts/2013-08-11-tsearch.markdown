@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "tSEARCH: Flexible and Fast Search over Automatic Translations for Improved Quality/Error Analysis"
+date:   2013-08-11 11:11:59 +00:00
+categories: research
+authors: "Meritxell Gonzàlez, <strong>Laura Mascarell</strong>, Lluís Màrquez"
+venue: "ACL System Demonstrations"
+paper: https://aclanthology.org/P13-4031/
+---
