@@ -7,5 +7,4 @@ authors: "<strong>Laura Mascarell</strong>, Ribin Chalumattu, Julien Heitmann"
 venue: "INLG"
 paper: https://aclanthology.org/2023.inlg-main.9/
 dataset: https://github.com/mediatechnologycenter/Multi-GeNews 
-website: https://mtc.ethz.ch/research/natural-language-processing/background-tool.html 
 ---

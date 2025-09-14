@@ -6,5 +6,6 @@ categories: research
 authors: "<strong>Laura Mascarell</strong>, Yan L'Homme, Majed El Helou"
 venue: "Findings ACL"
 paper: https://aclanthology.org/2024.findings-acl.316/
+code: https://github.com/mediatechnologycenter/SPIDer.git
 poster: /pdfs/poster_spider.pdf
 ---

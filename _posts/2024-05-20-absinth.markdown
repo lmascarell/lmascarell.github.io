@@ -8,5 +8,4 @@ venue: "LREC-COLING"
 paper: https://aclanthology.org/2024.lrec-main.680/
 dataset: https://github.com/mediatechnologycenter/Absinth
 poster: /pdfs/poster_absinth.pdf
-website: https://mtc.ethz.ch/research/natural-language-processing/faithful-summarization-german-news.html
 ---

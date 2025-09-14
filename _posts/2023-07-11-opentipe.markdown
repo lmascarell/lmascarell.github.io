@@ -8,5 +8,4 @@ venue: "ACL System Demonstrations"
 paper: https://aclanthology.org/2023.acl-demo.19/
 code: https://github.com/mediatechnologycenter/opentipe
 demo: https://aclanthology.org/2023.acl-demo.19.mp4
-website: https://mtc.ethz.ch/research/natural-language-processing/machine-translation.html
 ---
