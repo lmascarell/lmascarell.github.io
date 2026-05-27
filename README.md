@@ -1,14 +1,53 @@
-# updated website
+# lauramascarell.com
 
-This repo is built on a fork of **Jekyll Now** from [this repository](https://github.com/barryclark/jekyll-now). **Jekyll** is a static site generator that's perfect for GitHub hosted blogs ([Jekyll Repository](https://github.com/jekyll/jekyll))
+Personal academic site for Laura Mascarell — postdoctoral researcher at GIST.
 
-The website design is just a modification of [Jon Barron's website](https://jonbarron.info/) and is converted for my own use, re-purposing my old markdown posts. **Feel free to use template for your own purposes**, but please respect copyright for all the images/content in my `images`, `pdfs`, `_posts` folders. 
+## Layout
 
+```
+.
+├── index.html        Single-page site, editorial / serif-led, dusty rose accent
+├── styles.css        All styling — CSS custom properties drive the palette
+├── assets/
+│   └── profile.jpg   Hero portrait (replace with your real photo)
+└── .nojekyll         Disables Jekyll on GitHub Pages — site is served as static HTML
+```
 
+No build step, no dependencies — just static files served by GitHub Pages.
 
-## issues
-* In general, jekyll will try to build a full page for every post. I skip that by forcing `permalink: /`. This creates multiple entries in sitemap.xml for index.html but is otherwise fine. 
-* If you want multiple paragraphs, consider using `excerpt_separator: <!--more-->` in `_config.yml`, for my own use I didn't need this. 
-* My own posts have lots of extra stuff left over from my old jekyll design ("author", long descriptions, etc.), feel free to ignore them
-* I use thumbnails, so I can upload arbitrary sized images but then only display small ones. The `_make_thumbnails.sh` script generates them and the html template looks in `tn/` for all images. 
-* I have three categories of post with slightly differerent formatting, so changing sizing requires edits in multiple paces. 
+## Local preview
+
+```sh
+python3 -m http.server 8000
+# open http://localhost:8000
+```
+
+## Deploy
+
+Commit and push to the `main` branch of `lmascarell/lmascarell.github.io`. GitHub
+Pages serves it at `https://lauramascarell.com` automatically.
+
+The `.nojekyll` file prevents GitHub from running Jekyll on the repo, which
+matters because the previous version of the site was Jekyll-based; we now ship
+plain static HTML/CSS and want it served as-is.
+
+## Replacing the portrait
+
+Drop your photo in at `assets/profile.jpg`. Square images at ~400×400 work best,
+but any aspect ratio is fine — the CSS uses `object-fit: cover` to crop into the
+hero frame. You can swap between portrait styles (square / circle / large /
+duotone) by changing `data-portrait="…"` on the `<body>` element in
+`index.html`.
+
+## Other body data-attributes you can tweak
+
+- `data-motif="grain"` — also: `dots` | `grid` | `rail` | `none`
+- `data-portrait="square"` — also: `circle` | `large` | `duotone`
+- `data-bg="white"` — informational; the actual background color is driven by
+  `--bg` in `styles.css`
+
+## Editing publications, talks, contact
+
+Plain HTML — search for `<li class="pub">` and `<li class="talk">` in
+`index.html` and add/remove entries. Older publications use `data-extra` so
+they're collapsed behind the "Show earlier publications" button.
