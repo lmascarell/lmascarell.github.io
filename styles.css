@@ -410,9 +410,11 @@ body[data-motif="grain"] .hero-section::before {
 }
 .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .btn:active { transform: scale(0.98); }
-.btn--primary { background: var(--accent); color: var(--bone); }
+.btn--primary,
+.btn--primary:visited { background: var(--accent); color: var(--bone); }
 .btn--primary:hover { background: var(--accent-hover); color: var(--bone); }
-.btn--ghost { background: transparent; color: var(--ink); border-color: var(--rule-strong); }
+.btn--ghost,
+.btn--ghost:visited { background: transparent; color: var(--ink); border-color: var(--rule-strong); }
 .btn--ghost:hover { background: var(--bone); border-color: var(--ink); }
 .btn--sm { padding: 8px 12px; font-size: 13px; }
 .btn .icon { width: 16px; height: 16px; stroke-width: 1.75; }
