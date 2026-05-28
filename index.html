@@ -87,8 +87,15 @@
           <img src="images/profile.jpg" alt="Laura Mascarell" />
         </aside>
       </div>
+
+      <!-- meta strip removed -->
     </div>
   </section>
+
+  <!-- ─────────────────────────────────────────────────────────────────
+       NOW
+       ───────────────────────────────────────────────────────────────── -->
+  <!-- (NOW section removed per user preference — bio carries the current focus) -->
 
   <!-- ─────────────────────────────────────────────────────────────────
        RESEARCH
@@ -100,7 +107,7 @@
         <span class="kicker-line">01 — Research</span>
         <p class="section-deck">
           My current research focuses on adaptive agent systems and world
-          modeling in unfamiliar environments &mdash; new work on these is
+          modeling in unfamiliar environments&nbsp;&mdash;&nbsp;new work on these is
           forthcoming. Below is my published work to date, from a background
           in computational linguistics and NLP.
         </p>
@@ -335,7 +342,7 @@
           <div class="talk__body">
             <span class="talk__kind">Invited Talk</span>
             <h3 class="talk__title">World Models for Open-Ended Adaptation</h3>
-            <p class="talk__where">TAIC Workshop · Thinking about AI's Capability · Seoul</p>
+            <p class="talk__where">TAIC Workshop · Thinking about AI’s Capability · Seoul</p>
           </div>
           <a class="talk__link" href="https://taic-workshop.github.io" target="_blank" rel="noopener noreferrer">Workshop →</a>
         </li>
@@ -346,7 +353,7 @@
           </div>
           <div class="talk__body">
             <span class="talk__kind">Co-organizer</span>
-            <h3 class="talk__title">Thinking about AI's Capability</h3>
+            <h3 class="talk__title">Thinking about AI’s Capability</h3>
             <p class="talk__where">TAIC Workshop · Seoul</p>
           </div>
           <a class="talk__link" href="https://taic-workshop.github.io" target="_blank" rel="noopener noreferrer">Workshop →</a>
@@ -411,7 +418,6 @@
       </div>
     </div>
   </footer>
-
   <!-- ─────────────────────────────────────────────────────────────────
        PROGRESSIVE ENHANCEMENT (small, vanilla)
        ───────────────────────────────────────────────────────────────── -->
@@ -438,7 +444,7 @@
         });
       }, { rootMargin: '0px 0px -8% 0px', threshold: 0.01 });
       els.forEach(el => io.observe(el));
-      // Failsafe — reveal anything left after a moment
+      // Failsafe — reveal anything left after a moment, e.g. in non-scrolling contexts
       setTimeout(() => els.forEach(el => el.classList.add('in')), 1600);
     })();
 
@@ -449,6 +455,7 @@
       const icon = document.getElementById('show-all-icon');
       const extras = document.querySelectorAll('.pub[data-extra]');
       if (!btn) return;
+      // Initially hide extras
       extras.forEach(el => { el.style.display = 'none'; });
       let open = false;
       btn.addEventListener('click', () => {

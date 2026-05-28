@@ -37,7 +37,7 @@
   --signal:         #4A6A7E;   /* desaturated slate-blue for secondary links */
 
   /* ── Roles ───────────────────────────────────────────────────────── */
-  --bg:             var(--paper);
+  --bg:             var(--white);
   --fg:             var(--ink);
   --fg-muted:       var(--ink-3);
   --fg-subtle:      var(--ink-4);
@@ -180,6 +180,8 @@ section { padding: var(--section-py) 0; position: relative; }
   max-width: 48em;
   font-weight: 400;
   text-wrap: pretty;
+  hyphens: none;
+  overflow-wrap: normal;
 }
 .section-deck em {
   color: var(--accent);
@@ -323,7 +325,7 @@ body[data-motif="grain"] .hero-section::before {
   z-index: 30;
   display: flex; align-items: center; gap: 28px;
   padding: 14px 32px;
-  background: color-mix(in srgb, var(--paper) 82%, transparent);
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid transparent;
@@ -457,7 +459,7 @@ body[data-motif="grain"] .hero-section::before {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 540px) 180px;
+  grid-template-columns: minmax(0, 540px) 220px;
   gap: clamp(40px, 5vw, 64px);
   align-items: center;
   justify-content: start;
@@ -627,8 +629,8 @@ body[data-motif="grain"] .hero-section::before {
 
 /* PORTRAIT STYLE — square (default): light rose tint, soft corners */
 body[data-portrait="square"] .hero__portrait {
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
   border-radius: 12px;
 }
 
