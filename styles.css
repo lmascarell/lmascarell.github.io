@@ -483,7 +483,7 @@ body[data-motif="grain"] .hero-section::before {
 
 .hero__title {
   font-family: var(--font-serif);
-  font-size: clamp(2.75rem, 5.2vw, 4.75rem);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
   line-height: 1.05;
   letter-spacing: -0.025em;
   font-weight: 380;
@@ -1072,22 +1072,30 @@ body[data-portrait="duotone"] .hero__portrait::after {
    FOOTER
    ===================================================================== */
 
+/* =====================================================================
+   FOOTER — three-column structured close
+   ===================================================================== */
+
 .footer-section {
   background: var(--night);
   color: var(--night-fg);
-  padding: clamp(48px, 7vw, 80px) 0 28px 0;
+  padding: clamp(56px, 8vw, 88px) 0 26px 0;
 }
 .footer-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 48px;
-  padding-bottom: 32px;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: clamp(28px, 4vw, 56px);
+  padding-bottom: clamp(28px, 4vw, 44px);
   border-bottom: 1px solid var(--night-3);
 }
-.footer__col { display: flex; flex-direction: column; gap: 10px; }
+.footer__about {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
 .footer__brand {
   font-family: var(--font-serif);
-  font-size: 28px;
+  font-size: clamp(1.5rem, 2vw, 1.875rem);
   font-weight: 460;
   letter-spacing: -0.02em;
   line-height: 1.1;
@@ -1098,46 +1106,85 @@ body[data-portrait="duotone"] .hero__portrait::after {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin: 12px 0 0 0;
+  margin: 0;
   font-family: var(--font-sans);
   font-size: 14px;
   color: var(--night-fg-2);
   font-weight: 400;
 }
 .footer__pin {
-  width: 14px; height: 14px;
-  color: var(--accent);
+  width: 14px;
+  height: 14px;
+  color: var(--night-fg-2);
+  opacity: 0.6;
+}
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 .footer__col .head {
   font-family: var(--font-mono);
   font-size: 10px;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--night-fg-2);
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
-.footer__col a {
-  color: var(--night-fg);
+.footer__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--night-fg-2);
   font-family: var(--font-sans);
   font-size: 14px;
+  font-weight: 400;
   text-decoration: none;
-  display: inline-flex; align-items: center; gap: 8px;
-  transition: color var(--dur-fast) var(--ease-standard);
+  background: none !important;
+  transition: color var(--dur-base) var(--ease-standard);
 }
-.footer__col a:hover { color: var(--accent); }
-.footer__col a .icon { width: 14px; height: 14px; opacity: 0.7; }
-.footer-bottom {
-  display: flex; justify-content: space-between; align-items: center;
-  padding-top: 20px;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.06em;
+.footer__link:hover { color: var(--night-fg); }
+.footer__link .icon {
+  width: 14px;
+  height: 14px;
   color: var(--night-fg-2);
+  opacity: 0.6;
+  flex-shrink: 0;
+  transition: opacity var(--dur-fast) var(--ease-standard), color var(--dur-fast) var(--ease-standard);
+}
+.footer__link:hover .icon {
+  opacity: 1;
+  color: var(--accent);
+}
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   gap: 12px;
+  padding-top: 22px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--night-fg-2);
 }
-.footer-bottom a { color: var(--night-fg-2); text-decoration: none; }
+.footer-bottom a {
+  color: var(--night-fg-2);
+  text-decoration: none;
+  background: none !important;
+  transition: color var(--dur-fast) var(--ease-standard);
+}
 .footer-bottom a:hover { color: var(--accent); }
+
+@media (max-width: 720px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 32px;
+  }
+  .footer__about {
+    grid-column: 1 / -1;
+  }
+}
 
 /* =====================================================================
    ENTRANCES — subtle fade-in on scroll
