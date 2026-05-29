@@ -388,22 +388,6 @@
   </section>
 
   <!-- ─────────────────────────────────────────────────────────────────
-       LAB PHOTO
-       ───────────────────────────────────────────────────────────────── -->
-  <section class="lab-section" id="lab">
-    <div class="lab-inner">
-      <figure class="lab-figure">
-        <div class="lab-frame">
-          <img id="lab-photo" class="lab-photo" src="images/lab.jpg" alt="Members of Professor Sundong Kim's lab at GIST with the university mascots, under cherry blossoms in Gwangju" loading="lazy" />
-        </div>
-        <figcaption class="lab-caption">
-          <span class="lab-caption__line">With the lab, cherry blossom season · Gwangju 2026</span>
-        </figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- ─────────────────────────────────────────────────────────────────
        FOOTER
        ───────────────────────────────────────────────────────────────── -->
   <footer class="footer-section" id="contact">
@@ -462,7 +446,7 @@
     // Scroll reveal — applied via JS so it's progressive enhancement.
     // Fail-safe: anything still hidden after 1.6s gets revealed anyway.
     (function () {
-      const els = document.querySelectorAll('.pub, .talk, .section-header, .lab-figure');
+      const els = document.querySelectorAll('.pub, .talk, .section-header');
       els.forEach(el => el.classList.add('reveal'));
       const io = new IntersectionObserver((entries) => {
         entries.forEach(e => {
