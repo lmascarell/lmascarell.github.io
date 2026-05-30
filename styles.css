@@ -143,6 +143,12 @@ section { padding: var(--section-py) 0; position: relative; }
 #research { padding-bottom: calc(var(--section-py) * 0.5); }
 #talks { padding-top: calc(var(--section-py) * 0.5); }
 
+/* Anchor-jump offset: land each section's heading ~24px below the sticky nav.
+   scroll-margin cancels each section's own top padding so the gap is uniform. */
+#research { scroll-margin-top: calc(92px - var(--section-py)); }
+#talks    { scroll-margin-top: calc(92px - var(--section-py) * 0.5); }
+#contact  { scroll-margin-top: 8px; }
+
 .section-header {
   display: flex;
   flex-direction: column;
