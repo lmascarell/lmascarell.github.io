@@ -1237,6 +1237,38 @@ body[data-portrait="duotone"] .hero__portrait::after {
   .nav__links { display: none; }
   .nav__affiliation { display: none; }
 }
+/* ── Footer tone variants (data-footertone) ───────────────────────── */
+/* espresso — deep warm brown, lighter & softer than near-black */
+body[data-footertone="espresso"] .footer-section { background: #2A201A; }
+
+/* wine — dark aubergine tied to the dusty-rose accent */
+body[data-footertone="wine"] .footer-section {
+  background: #2A171D;
+  --night-3: #4A2630;
+  --night-fg-2: #C9A9AE;
+}
+
+/* ink — cooler deep charcoal, the most neutral dark */
+body[data-footertone="ink"] .footer-section {
+  background: #1E1F22;
+  --night-3: #3A3C40;
+  --night-fg-2: #B4B5B8;
+}
+
+/* paper — no inversion: footer stays light, set off by a rule */
+body[data-footertone="paper"] .footer-section {
+  background: var(--paper-2);
+  border-top: 1px solid var(--rule);
+  --night-fg: var(--ink);
+  --night-fg-2: var(--ink-3);
+  --night-3: var(--rule);
+}
+body[data-footertone="paper"] .footer__link,
+body[data-footertone="paper"] .footer__link:visited { color: var(--rose-deep); }
+body[data-footertone="paper"] .footer__link:hover,
+body[data-footertone="paper"] .footer__link:hover:visited { color: var(--ink); }
+body[data-footertone="paper"] .footer__link:hover .icon { color: var(--rose-deep); }
+
 @media (max-width: 560px) {
   .container { padding: 0 20px; }
   .hero__meta { grid-template-columns: 1fr 1fr; gap: 16px; }
