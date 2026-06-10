@@ -483,7 +483,7 @@ body[data-motif="grain"] .hero-section::before {
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 540px) 220px;
-  gap: clamp(40px, 5vw, 64px);
+  gap: clamp(20px, 2.5vw, 32px);
   align-items: center;
   justify-content: start;
 }
@@ -576,11 +576,11 @@ body[data-motif="grain"] .hero-section::before {
 
 .hero__bio {
   margin: 0 0 32px 0;
-  max-width: 36em;
+  max-width: 500px;
 }
 .hero__bio p {
   font-family: var(--font-serif);
-  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  font-size: clamp(1.0625rem, 1.3vw, 1.1875rem);
   line-height: 1.6;
   color: var(--ink-2);
   font-weight: 400;
@@ -616,6 +616,7 @@ body[data-motif="grain"] .hero-section::before {
   border-radius: var(--r-4);
   box-shadow: var(--shadow-2);
   background: var(--paper-2);
+  transform: translateY(2px);
   transition: width 200ms var(--ease-standard), height 200ms var(--ease-standard), border-radius 200ms var(--ease-standard);
 }
 .hero__portrait-cap {
@@ -652,8 +653,8 @@ body[data-motif="grain"] .hero-section::before {
 
 /* PORTRAIT STYLE — square (default): light rose tint, soft corners */
 body[data-portrait="square"] .hero__portrait {
-  width: 220px;
-  height: 220px;
+  width: 212px;
+  height: 212px;
   border-radius: 12px;
 }
 
@@ -669,8 +670,8 @@ body[data-portrait="circle"] .hero__portrait::after {
 
 /* PORTRAIT STYLE — larger clean portrait, no tint */
 body[data-portrait="large"] .hero__portrait {
-  width: 240px;
-  height: 280px;
+  width: 216px;
+  height: 252px;
   border-radius: 10px;
 }
 body[data-portrait="large"] .hero__portrait::after {
@@ -1233,7 +1234,7 @@ body[data-portrait="duotone"] .hero__portrait::after {
 
 @media (max-width: 920px) {
   .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-  .hero__portrait { margin: 0 auto; }
+  .hero__portrait { margin: 0 auto; transform: none; }
   .hero__meta { grid-template-columns: repeat(2, 1fr); }
   .now-grid { grid-template-columns: 1fr; gap: 16px; }
   .pub { grid-template-columns: 1fr; gap: 8px; }
