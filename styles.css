@@ -580,7 +580,7 @@ body[data-motif="grain"] .hero-section::before {
 }
 .hero__bio p {
   font-family: var(--font-serif);
-  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  font-size: 1rem;
   line-height: 1.6;
   color: var(--ink-2);
   font-weight: 400;
